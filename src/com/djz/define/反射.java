@@ -2,9 +2,9 @@ package com.djz.define;
 
 import com.djz.pojo.Apple;
 
-import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+
 
 /**
  * @author djz
@@ -16,14 +16,17 @@ public class 反射 {
         Class c2 = Class.forName("com.djz.pojo.Apple");
         Apple apple = new Apple();
         Class c3 = apple.getClass();
-        System.out.println(c3.getName());
+
+        //  System.out.println(c3.getName());
 
         Method[] methods = c1.getDeclaredMethods();
-
-        for (Method m : methods) {
-            System.out.println(m);
+        Field[] field = c1.getDeclaredFields();
+        for (Field f : field) {
+            System.out.println(f.toString());
         }
-
+//        for (Method m : methods) {
+//            System.out.println(m);
+//        }
 
 
     }

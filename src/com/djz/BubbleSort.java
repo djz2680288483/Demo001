@@ -12,7 +12,7 @@ public class BubbleSort {
     }
 
     /**
-     * 冒泡排序
+     * 冒泡排序    时间复杂度n^2
      *
      * @param array
      * @return
